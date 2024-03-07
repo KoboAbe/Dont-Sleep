@@ -6,12 +6,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float playerWalkSpeed, playerRunSpeed;
-    public float moveHorizontal,moveVertical;
-    private Rigidbody playerRb;
+    public float playerWalkSpeed, playerRunSpeed, rotationSpeed;
+    private float moveHorizontal,moveVertical;
     public GameObject activationObject; 
     public int totalItems = 4; 
     public int collectedItems = 0;
+    public Animator playerAnimator;
+    public Rigidbody playerRb;
+
     
     void Start()
     {
@@ -23,12 +25,21 @@ public class PlayerController : MonoBehaviour
     {
         moveHorizontal = Input.GetAxis("Horizontal");
         moveVertical = Input.GetAxis("Vertical");
-        Vector3 playerMovement = new Vector3(moveHorizontal,0,moveVertical);
-        playerRb.velocity = playerMovement * playerWalkSpeed * Time.deltaTime;
+        transform.Translate(Vector3.forward * moveVertical * playerWalkSpeed * Time.deltaTime);
+        transform.Translate(Vector3.right * moveHorizontal * playerWalkSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up * rotationSpeed * moveHorizontal * playerWalkSpeed * Time.deltaTime);
+        playerAnimator.SetFloat("VelX",moveHorizontal);
+        playerAnimator.SetFloat("VelY",moveVertical);
 
         if(Input.GetKey(KeyCode.LeftShift))
         {
-            playerRb.velocity = playerMovement * playerRunSpeed * Time.deltaTime;
+            playerAnimator.SetBool("IsRun",true);
+            transform.Translate(Vector3.forward * moveVertical * playerRunSpeed * Time.deltaTime);
+            transform.Translate(Vector3.right * moveHorizontal * playerRunSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up * rotationSpeed * moveHorizontal * playerRunSpeed * Time.deltaTime);
+        }else 
+        {
+            playerAnimator.SetBool("IsRun",false);
         }
     }
 
@@ -36,7 +47,9 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Enemy"))
         {
+            playerAnimator.SetBool("GameOver",true);
             Debug.Log("Game Over");
+
         }
         
     }
