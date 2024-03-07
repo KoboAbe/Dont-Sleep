@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8308775611798836004}
   - component: {fileID: 4963363648329079937}
   - component: {fileID: 7135284801684973643}
+  - component: {fileID: 5855020289887978092}
   m_Layer: 0
   m_Name: SP_Crystal01
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5855020289887978092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8648428375196731806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6997404, y: 0.999854, z: 0.7558273}
+  m_Center: {x: 0.12404846, y: 0.499927, z: -0.059413306}
