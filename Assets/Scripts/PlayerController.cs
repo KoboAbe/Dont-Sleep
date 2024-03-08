@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Callbacks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -109,5 +110,13 @@ public class PlayerController : MonoBehaviour
                     activationObject.SetActive(true);
                 }
             }
+        if (other.CompareTag("Door"))
+        {
+            SceneManager.LoadScene(2);
+        }
+        if (other.CompareTag("Door2"))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

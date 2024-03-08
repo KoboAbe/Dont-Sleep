@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Enviroment.unity
     guid: 6cbbaab6a3564a044b3080383c3a523f
+  - enabled: 1
+    path: Assets/Scenes/NivelBosque.unity
+    guid: 60138db6963a1ef41bb72473e71dace1
   m_configObjects: {}

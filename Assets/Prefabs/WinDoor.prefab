@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3722727186065369576}
   m_Layer: 0
   m_Name: doorWing
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 3745685096808846108}
   m_Layer: 0
   m_Name: doorKnob
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,9 +193,10 @@ GameObject:
   - component: {fileID: 3721877984854695864}
   - component: {fileID: 3737716184373292008}
   - component: {fileID: 3745333207373481192}
+  - component: {fileID: 8758926144712777814}
   m_Layer: 0
   m_Name: WinDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,3 +267,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8758926144712777814
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3723443423966332476}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1185136, y: 2.0849233, z: 0.19722301}
+  m_Center: {x: 3.2601208e-16, y: -0.0024617196, z: 0.02971193}
