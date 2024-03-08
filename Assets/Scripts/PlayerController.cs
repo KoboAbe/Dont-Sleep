@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public bool isPlaying; // El jugador esta jugando
     public AudioSource steps;
     public AudioSource sprintSteps;
+    public Canvas over,win;
+    
 
     void Start()
     {
@@ -90,6 +92,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("GameOver",true);
             Debug.Log("Game Over");
             isPlaying = false;
+            over.gameObject.SetActive(true);
         }
         
     }
@@ -116,7 +119,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.CompareTag("Door2"))
         {
-            SceneManager.LoadScene(0);
+            win.gameObject.SetActive(true);
         }
     }
 }
