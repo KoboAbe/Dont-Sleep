@@ -428,7 +428,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.44891423, g: 0.5655648, b: 0.9811321, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 72
   m_InnerSpotAngle: 21.80208
@@ -502,7 +502,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8865319824823377359}
-  m_LocalRotation: {x: 0.40266323, y: 3.6687157e-15, z: -3.972041e-15, w: 0.91534823}
+  m_LocalRotation: {x: 0.40266323, y: -3.6687157e-15, z: 3.972041e-15, w: 0.91534823}
   m_LocalPosition: {x: 0, y: 14, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -670,7 +670,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8865319825240006095}
-  m_LocalRotation: {x: 0.40266323, y: 3.6687157e-15, z: -3.972041e-15, w: 0.91534823}
+  m_LocalRotation: {x: 0.40266323, y: -6.6199424e-15, z: 1.504065e-15, w: 0.91534823}
   m_LocalPosition: {x: 0, y: 14, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -933,3 +933,5 @@ MonoBehaviour:
   isPlaying: 0
   steps: {fileID: 1950184690}
   sprintSteps: {fileID: 340996806}
+  over: {fileID: 0}
+  win: {fileID: 0}
