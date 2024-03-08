@@ -10,23 +10,23 @@ public class pause : MonoBehaviour
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUi;
 
- 
+
 
     // Start is called before the first frame update
 
-             public void pausar()
-                      {
-                    pauseMenuUi.SetActive(true);
-                     Time.timeScale = 0f;
-                     gameIsPaused = true;
-                         }
+    public void pausar()
+    {
+        pauseMenuUi.SetActive(true);
+        Time.timeScale = 0f;
+        gameIsPaused = true;
+    }
 
-             public void resume()
-                     {
-                 pauseMenuUi.SetActive(false);
-                 Time.timeScale = 1f;
-                 gameIsPaused = false;
-                 Debug.Log("se hizo clic");
+    public void resume()
+    {
+        pauseMenuUi.SetActive(false);
+        Time.timeScale = 1f;
+        gameIsPaused = false;
+        Debug.Log("se hizo clic");
     }
 
     public void loadMenu()

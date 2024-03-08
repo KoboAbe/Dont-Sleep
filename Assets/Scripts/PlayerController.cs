@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
     public Animator playerAnimator; // Animator del jugador
 
     public bool isPlaying; // El jugador esta jugando
-    public AudioSource steps;
-    public AudioSource sprintSteps;
+    public AudioSource steps, sprintSteps, collectibleObjects;
+    public AudioClip collectSound;
     public Canvas over,win;
     
 
@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
         //DETECCION DE ADQUISICIÍN DE UN COLECCIONABLE
         if(other.CompareTag("Coleccionable"))
         {
+            collectibleObjects.PlayOneShot(collectSound, 1.0f);
             Destroy(other.gameObject);
             collectedItems++;
         }

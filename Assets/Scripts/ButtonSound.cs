@@ -4,23 +4,23 @@ using UnityEngine.EventSystems;
 
 public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public AudioClip hoverSound; // Sonido que se reproducirá al pasar el mouse sobre el botón
-    public AudioClip clickSound; // Sonido que se reproducirá al hacer clic en el botón
+    public AudioClip hoverSound; // Sonido que se reproducirï¿½ al pasar el mouse sobre el botï¿½n
+    public AudioClip clickSound; // Sonido que se reproducirï¿½ al hacer clic en el botï¿½n
 
-    private Button button; // Referencia al componente Button del botón
+    private Button button; // Referencia al componente Button del botï¿½n
     private AudioSource audioSource; // Referencia al componente AudioSource para reproducir sonidos
     private bool hasPlayedSound = false; // Indica si el sonido de hover ya se ha reproducido
 
     void Start()
     {
-        // Obtener la referencia al componente Button del botón
+        // Obtener la referencia al componente Button del botï¿½n
         button = GetComponent<Button>();
 
 
         // Asegurarse de que hay un AudioClip asignado al sonido de hover
         if (hoverSound == null)
         {
-            Debug.LogError("No se ha asignado ningún AudioClip para el sonido de hover en el botón.");
+            Debug.LogError("No se ha asignado ningï¿½n AudioClip para el sonido de hover en el botï¿½n.");
             return;
         }
 
@@ -35,7 +35,7 @@ public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         audioSource.clip = hoverSound;
     }
 
-    // Se ejecuta cuando el mouse entra en el área del botón
+    // Se ejecuta cuando el mouse entra en el ï¿½rea del botï¿½n
     public void OnPointerEnter(PointerEventData eventData)
     {
         // Si el sonido de hover no se ha reproducido, reproducirlo
@@ -46,17 +46,17 @@ public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
     }
 
-    // Se ejecuta cuando el mouse sale del área del botón
+    // Se ejecuta cuando el mouse sale del ï¿½rea del botï¿½n
     public void OnPointerExit(PointerEventData eventData)
     {
-        // Reiniciar la bandera de reproducción de sonido de hover cuando el mouse sale del botón
+        // Reiniciar la bandera de reproducciï¿½n de sonido de hover cuando el mouse sale del botï¿½n
         hasPlayedSound = false;
     }
 
-    // Se ejecuta cuando se hace clic en el botón
+    // Se ejecuta cuando se hace clic en el botï¿½n
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Reproducir el sonido de clic si está asignado
+        // Reproducir el sonido de clic si estï¿½ asignado
         if (clickSound != null)
         {
             audioSource.PlayOneShot(clickSound);
