@@ -15698,6 +15698,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1993280287, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
+      propertyPath: m_Range
+      value: 11.734317
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993280287, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
+      propertyPath: m_Intensity
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993280287, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
+      propertyPath: m_SpotAngle
+      value: 79.464294
+      objectReference: {fileID: 0}
     - target: {fileID: 8003624536920840197, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: totalItems
       value: 5
@@ -15708,11 +15720,11 @@ PrefabInstance:
       objectReference: {fileID: 2000937029}
     - target: {fileID: 8865319824823377360, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 3.6687157e-15
+      value: 6.6199424e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8865319824823377360, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -3.972041e-15
+      value: -1.504065e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15724,11 +15736,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 3.6687157e-15
+      value: 6.6199424e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -3.972041e-15
+      value: -1.504065e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8865319826224857366, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_Name
@@ -24798,7 +24810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -24811,7 +24823,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
