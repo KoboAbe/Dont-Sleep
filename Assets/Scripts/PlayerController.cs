@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour
     public Animator playerAnimator; // Animator del jugador
 
     public bool isPlaying; // El jugador esta jugando
-    
+    public AudioSource steps;
+    public AudioSource sprintSteps;
+
     void Start()
     {
         isPlaying = true;
@@ -53,8 +55,30 @@ public class PlayerController : MonoBehaviour
             {
                 //CONTROLADORES DE ANIMACIÓN
                 playerAnimator.SetBool("IsRun",false);
+            } 
+
+            if(moveHorizontal >= 1 || moveHorizontal <= -1 || moveVertical >= 1 || moveVertical <= -1)
+            {
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    steps.enabled = false;
+                    sprintSteps.enabled = true;
+                }
+                else
+                {
+                    steps.enabled = true;
+                    sprintSteps.enabled = false;
+                }
             }
+            else
+            {
+                steps.enabled = false;
+                sprintSteps.enabled = false;
+            
         }
+    
+
+}
     }
 
     void OnCollisionEnter(Collision other)
