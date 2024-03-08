@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.004880624, g: 0.017840162, b: 0.020781316, a: 1}
+  m_IndirectSpecularColor: {r: 0.06054888, g: 0.14343825, b: 0.15638965, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15716,6 +15716,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1993280287, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
+      propertyPath: m_Intensity
+      value: 24.38
+      objectReference: {fileID: 0}
     - target: {fileID: 8003624536920840197, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: win
       value: 
@@ -15734,11 +15738,11 @@ PrefabInstance:
       objectReference: {fileID: 2000937029}
     - target: {fileID: 8865319824823377360, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000038579035
+      value: 6.6199424e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8865319824823377360, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000016970983
+      value: -1.504065e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15750,11 +15754,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000038579035
+      value: 6.6199424e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000016970983
+      value: -1.504065e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8865319826224857366, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_Name
@@ -25511,6 +25515,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1127802883, guid: 4168a85c48c290840894f939b4b19323, type: 3}
+      propertyPath: m_Intensity
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6699545897254210050, guid: 4168a85c48c290840894f939b4b19323, type: 3}
       propertyPath: m_Name
       value: MainEnemy (3)
@@ -32736,6 +32744,10 @@ PrefabInstance:
       propertyPath: MinDistance
       value: 3.0102005
       objectReference: {fileID: 0}
+    - target: {fileID: 1127802883, guid: 4168a85c48c290840894f939b4b19323, type: 3}
+      propertyPath: m_Intensity
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6699545897254210050, guid: 4168a85c48c290840894f939b4b19323, type: 3}
       propertyPath: m_Name
       value: MainEnemy (1)
@@ -33756,6 +33768,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1127802883, guid: 4168a85c48c290840894f939b4b19323, type: 3}
+      propertyPath: m_Intensity
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6699545897254210050, guid: 4168a85c48c290840894f939b4b19323, type: 3}
       propertyPath: m_Name
       value: MainEnemy
@@ -46660,6 +46676,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1127802883, guid: 4168a85c48c290840894f939b4b19323, type: 3}
+      propertyPath: m_Intensity
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6699545897254210050, guid: 4168a85c48c290840894f939b4b19323, type: 3}
       propertyPath: m_Name
       value: MainEnemy (2)

@@ -1049,6 +1049,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1993280287, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
+      propertyPath: m_Intensity
+      value: 16.81
+      objectReference: {fileID: 0}
     - target: {fileID: 8003624536920840197, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: over
       value: 
@@ -1067,23 +1071,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.648155
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -38.014935
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -3.6687157e-15
+      value: 6.6199424e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8865319825240006096, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.972041e-15
+      value: -1.504065e-15
       objectReference: {fileID: 0}
     - target: {fileID: 8865319826224857366, guid: 7e14acdc331aaab4c99680fec175fbea, type: 3}
       propertyPath: m_Name
@@ -2610,6 +2614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1127802883, guid: 4168a85c48c290840894f939b4b19323, type: 3}
+      propertyPath: m_Intensity
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6699545897254210050, guid: 4168a85c48c290840894f939b4b19323, type: 3}
       propertyPath: m_Name
       value: MainEnemy
