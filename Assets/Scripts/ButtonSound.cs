@@ -16,6 +16,7 @@ public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         // Obtener la referencia al componente Button del botón
         button = GetComponent<Button>();
 
+
         // Asegurarse de que hay un AudioClip asignado al sonido de hover
         if (hoverSound == null)
         {
