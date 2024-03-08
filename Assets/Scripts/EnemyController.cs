@@ -9,33 +9,43 @@ public class EnemyController : MonoBehaviour
     public float detectionRange = 20.0f; // Rango de detección del jugador
     private Transform player; // Posicion del jugador
     public Animator enemyAnim; // Animator del enemigo
-    private PlayerController PlayerController;
     public bool stop;
     void Start()
     {
-        PlayerController = GetComponent<PlayerController>();
+        stop = true;
         //POSICION DEL JUGADOR
         player = GameObject.Find("Player").transform;
     }
 
     void Update()
     {
-        //DIRECCION DEL JUGADOR
-        Vector3 directionToPlayer = player.position - transform.position;
+        if(stop)
+        {
+            //DIRECCION DEL JUGADOR
+            Vector3 directionToPlayer = player.position - transform.position;
         
-        //DETECCION DE JUGADOR Y MOVIMIENTO
-        if (directionToPlayer.magnitude <= detectionRange)
-        {
-            enemyAnim.SetBool("IsRun",true);
-            directionToPlayer.Normalize();
-            transform.position += directionToPlayer * speed * Time.deltaTime;
-            transform.LookAt(player);
+            //DETECCION DE JUGADOR Y MOVIMIENTO
+            if (directionToPlayer.magnitude <= detectionRange)
+            {
+                enemyAnim.SetBool("IsRun",true);
+                directionToPlayer.Normalize();
+                transform.position += directionToPlayer * speed * Time.deltaTime;
+                transform.LookAt(player);
+            }
+            else
+            {
+                enemyAnim.SetBool("IsRun",false);
+            }
         }
-        else
+        
+    
+    }
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.CompareTag("Player"))
         {
+            stop = false;
             enemyAnim.SetBool("IsRun",false);
         }
-    
     }
 
 }
