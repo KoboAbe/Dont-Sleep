@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1671404203270822261}
   - component: {fileID: 2350279570625812176}
   - component: {fileID: 538507366884352538}
+  - component: {fileID: 6416696662379142266}
   m_Layer: 0
   m_Name: SP_Rock03
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6416696662379142266
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051906301658465231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5800695, y: 0.67209816, z: 0.628281}
+  m_Center: {x: 0, y: 0.33604908, z: 0}
