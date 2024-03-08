@@ -6,60 +6,78 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float playerWalkSpeed, playerRunSpeed, rotationSpeed;
-    private float moveHorizontal,moveVertical;
-    public GameObject activationObject; 
-    public int totalItems = 4; 
-    public int collectedItems = 0;
-    public Animator playerAnimator;
-    public Rigidbody playerRb;
+    public float playerWalkSpeed, playerRunSpeed, rotationSpeed; // Velocidades del movimiento al caminar, correr y rotar respectivamente
+    private float moveHorizontal,moveVertical; // Movimiento en el eje horizontal y vertical
+    public GameObject activationObject; // Objeto de puerta, se activa al recolectar todos los coleccionables
+    public int totalItems = 4; // Total coleccionables
+    public int collectedItems = 0; // Cantidad actual de coleccionables
+    public Animator playerAnimator; // Animator del jugador
 
+    public bool isPlaying; // El jugador esta jugando
     
     void Start()
     {
-        playerRb = GetComponent<Rigidbody>();
+        isPlaying = true;
     }
 
     
     void Update()
     {
-        moveHorizontal = Input.GetAxis("Horizontal");
-        moveVertical = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.forward * moveVertical * playerWalkSpeed * Time.deltaTime);
-        transform.Translate(Vector3.right * moveHorizontal * playerWalkSpeed * Time.deltaTime);
-        transform.Rotate(Vector3.up * rotationSpeed * moveHorizontal * playerWalkSpeed * Time.deltaTime);
-        playerAnimator.SetFloat("VelX",moveHorizontal);
-        playerAnimator.SetFloat("VelY",moveVertical);
 
-        if(Input.GetKey(KeyCode.LeftShift))
+        if(isPlaying)
         {
-            playerAnimator.SetBool("IsRun",true);
-            transform.Translate(Vector3.forward * moveVertical * playerRunSpeed * Time.deltaTime);
-            transform.Translate(Vector3.right * moveHorizontal * playerRunSpeed * Time.deltaTime);
-            transform.Rotate(Vector3.up * rotationSpeed * moveHorizontal * playerRunSpeed * Time.deltaTime);
-        }else 
-        {
-            playerAnimator.SetBool("IsRun",false);
+            //MOVIMIENTO EN EL EJE HORIZONTAL Y VERTICAL
+            moveHorizontal = Input.GetAxis("Horizontal");
+            moveVertical = Input.GetAxis("Vertical"); 
+
+            //MOVIMIENTO DEL JUGADOR
+            transform.Translate(Vector3.forward * moveVertical * playerWalkSpeed * Time.deltaTime);
+            transform.Translate(Vector3.right * moveHorizontal * playerWalkSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up * rotationSpeed * moveHorizontal * playerWalkSpeed * Time.deltaTime);
+
+            //CONTROLADORES DE ANIMACIÓN
+            playerAnimator.SetFloat("VelX",moveHorizontal);
+            playerAnimator.SetFloat("VelY",moveVertical);
+
+            //MECANICA DE CORRER
+            if(Input.GetKey(KeyCode.LeftShift))
+            {
+                //CONTROLADORES DE ANIMACIÓN
+                playerAnimator.SetBool("IsRun",true);
+
+                //MOVIMIENTO DEL JUGADOR CON playerRunSpeed
+                transform.Translate(Vector3.forward * moveVertical * playerRunSpeed * Time.deltaTime);
+                transform.Translate(Vector3.right * moveHorizontal * playerRunSpeed * Time.deltaTime);
+                transform.Rotate(Vector3.up * rotationSpeed * moveHorizontal * playerRunSpeed * Time.deltaTime);
+            }else 
+            {
+                //CONTROLADORES DE ANIMACIÓN
+                playerAnimator.SetBool("IsRun",false);
+            }
         }
     }
 
     void OnCollisionEnter(Collision other)
     {
+        //DETECCIÓN DE GAME OVER
         if(other.gameObject.CompareTag("Enemy"))
         {
             playerAnimator.SetBool("GameOver",true);
             Debug.Log("Game Over");
-
+            isPlaying = false;
         }
         
     }
 
     private void OnTriggerEnter(Collider other) {
+
+        //DETECCION DE ADQUISICIÍN DE UN COLECCIONABLE
         if(other.CompareTag("Coleccionable"))
         {
             Destroy(other.gameObject);
             collectedItems++;
         }
+        //CONDICION DE VICTORIA
         if (collectedItems >= totalItems)
             {
                 if (activationObject != null)

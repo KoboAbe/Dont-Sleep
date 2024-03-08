@@ -51,8 +51,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 4829805752723351539}
+  m_Follow: {fileID: 4829805752723351539}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 8865319826224857367}
   m_Layer: 0
   m_Name: MainPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,19 +374,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c6226c58434cbfa4285469cf6109bb2c, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: c6226c58434cbfa4285469cf6109bb2c, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4dc27fc0ece5c5e43b3f78f9b64645df, type: 2}
     - target: {fileID: 5866666021909216657, guid: c6226c58434cbfa4285469cf6109bb2c, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:RightHandIndex2'\n\tTransform
-        'mixamorig:RightHand'\n\tTransform 'mixamorig:RightHandIndex1'\n\tTransform
-        'mixamorig:LeftFoot'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:RightArm'\n\tTransform
-        'mixamorig:LeftLeg'\n\tand more ...\n\tFrom animation clip 'mixamo.com'"
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6226c58434cbfa4285469cf6109bb2c, type: 3}
@@ -453,3 +451,4 @@ MonoBehaviour:
   totalItems: 4
   collectedItems: 0
   playerAnimator: {fileID: 1578166880765181321}
+  playerRb: {fileID: 0}
